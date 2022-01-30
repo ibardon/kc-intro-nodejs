@@ -64,12 +64,12 @@ Lista de tags:
 
 # Documentacion
 
-Swagger
+Swagger Está montado y a medias
 
-- localhost:3000//api-docs
+- localhost:3000/api-docs
 
 # Notas
 
 No he sabido hacer ni el max ni el min de precios
-Tampoco la busqueda de URL
-Ni la inserción en página web.
+Tampoco la busqueda de texto en la URL
+Ni la inserción en página web, porque ya no me daba tiempo.
