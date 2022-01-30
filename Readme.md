@@ -36,31 +36,14 @@ npm run start
 
 * Filtro por nombre (por ejemplo productos que empiezan por ip):
 
-- localhost:3000/api/anuncios?&name=ip
+No realizado
 
 * Filtro por precio (con precio mayor o igual a 50):
-
-- localhost:3000/api/anuncios?price=50-
-
-* Filtro por precio (con precio menor o igual a 50):
-
-- localhost:3000/api/anuncios?price=-50
-
-* Filtro por precio (con precios entre 50 y 250):
-
-- localhost:3000/api/anuncios?price=50-250
-
-* Filtro por precio (con precio igual a 50):
-
-- localhost:3000/api/anuncios?price=50
+No realizado
 
 * Ordenación:
 
 - localhost:3000/api/anuncios?sort=price
-
-Lista de tags:
-
-- /api/anuncios/tags
 
 # Documentacion
 
