@@ -1,0 +1,66 @@
+[
+  {
+    "name": "boli",
+    "shell": "true",
+    "price": "0.15",
+    "photo": "./content/images/3c26f3e3-ebf6-4202-aee6-96d13a72e578.jpeg",
+    "user": "PS",
+    "tags": ["work"]
+  },
+  {
+    "name": "Termo",
+    "shell": "true",
+    "price": "11.66",
+    "photo": "./content/images/1485cdb5-beef-4cfa-b5e0-7a93e070ed03.jpeg",
+    "user": "mob",
+    "tags": ["lifestyle"]
+  },
+  {
+    "name": "Taza",
+    "shell": "true",
+    "price": "3.10",
+    "photo": "./content/images/061f04df-4123-48f8-9ad4-9584f9b23d1f.jpeg",
+    "user": "mob",
+    "tags": ["lifestyle", "mobile"]
+  },
+  {
+    "name": "CHESS",
+    "shell": "true",
+    "price": "18.81",
+    "photo": "./content/images/2d47d087-974d-4825-8f82-61a437ca273f.jpeg",
+    "user": "PF",
+    "tags": ["lifestyle"]
+  },
+  {
+    "name": "metro",
+    "shell": "true",
+    "price": "0.67",
+    "photo": "./content/images/b93bf4a7-1f09-47da-b60b-016da5a7b1d7.jpeg",
+    "user": "MKT",
+    "tags": ["work"]
+  },
+  {
+    "name": "ford",
+    "shell": "false",
+    "price": "1500",
+    "photo": "./content/images/ford-sierra-rs500-cosworth.jpg",
+    "user": "agapito82",
+    "tags": ["motor"]
+  },
+  {
+    "name": "chalet",
+    "shell": "false",
+    "price": "150000",
+    "photo": "./content/images/905418476.jpg",
+    "user": "AmanteBandido",
+    "tags": ["lifestyle"]
+  },
+  {
+    "name": "MacBook Pro Intel",
+    "shell": "false",
+    "price": "2500",
+    "photo": "./content/images/1366_2000.jpg",
+    "user": "maclover",
+    "tags": ["work", "mobile"]
+  }
+]

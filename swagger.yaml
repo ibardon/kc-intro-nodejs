@@ -1,0 +1,132 @@
+tags:
+- name: anuncios
+  description: API definición de anuncios
+
+paths:
+# [GET] anuncios
+  /anuncios:
+    get:
+      tags:
+      - anuncios
+      summary: Encontrar todos los Anuncios
+      responses:
+        200:
+          description: 'OK'
+        404:
+          description: 'Error No Encontrado'
+        422:
+          description: 'Error de Validación de Parámetros'
+        500:
+          description: 'Server Error'
+
+# [GET] anuncios/id
+  /anuncios/{id}:
+    get:
+      tags:
+      - anuncios
+      summary: Find User By Id
+      parameters:
+      - name: id
+        in: path
+        description: User Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [POST] anuncios
+    post:
+      tags:
+      - anuncios
+      summary: Añadir User
+      parameters:
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/anuncios'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+
+
+# [PUT] anuncios/id
+    put:
+      tags:
+      - anuncios
+      summary: Update User By Id
+      parameters:
+      - name: id
+        in: path
+        description: user Id
+        required: true
+        type: integer
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/anuncios'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [DELETE] anuncios/id
+    delete:
+      tags:
+      - anuncios
+      summary: Delete User By Id
+      parameters:
+      - name: id
+        in: path
+        description: user Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# definitions
+definitions:
+  anuncios:
+    type: object
+    required:
+        - email
+        - password
+    properties:
+      id:
+        type: integer
+        description: user Id
+      email:
+        type: string
+        description: user Email
+      password:
+        type: string
+        description: user Password
+
+schemes:
+ - https
+ - http
