@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "be8b1631-5373-42ce-a7a3-872b637c25f2",
+		"name": "NodeJS-Práctica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/61f5e06fb812d575e433ff1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						"61f5e06fb812d575e433ff1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "61f5e06fb812d575e433ff1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subir Anuncio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/home/ibardon/Documentos/Keepcoding/Desarrollo-Backend-con-Node.js/practica/nodepop/public/images/2d47d087-974d-4825-8f82-61a437ca273f.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/?name=SeatLeon Subida File&venta=Sí&precio=1500&foto=kmkn&vendedor=tuRumbero82",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "SeatLeon Subida File"
+						},
+						{
+							"key": "venta",
+							"value": "Sí"
+						},
+						{
+							"key": "precio",
+							"value": "1500"
+						},
+						{
+							"key": "foto",
+							"value": "kmkn"
+						},
+						{
+							"key": "vendedor",
+							"value": "tuRumbero82"
+						},
+						{
+							"key": "photo",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Lista Anuncios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "name",
+						"value": "MacBook Pro Intel",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrado Anuncio",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Chalet a estrenar con puticlub",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "precio",
+							"value": "500000",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "vendedor",
+							"value": "Costco",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "venta",
+							"value": "sí",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/61edba05a3b7afa41fe5e051",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						"61edba05a3b7afa41fe5e051"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Lista Anuncios - Filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "name",
+						"value": "MacBook Pro Intel",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/?price={$gt: 30}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "tag",
+							"value": "mobile",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "user",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "{$gt: 30}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subir Anuncio - POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "pepe22222",
+							"type": "text"
+						},
+						{
+							"key": "shell",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "work",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "internet",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "shell",
+							"value": "yes",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"disabled": true
+						},
+						{
+							"key": "user",
+							"value": "tuRumbero82",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Anuncio - PUT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "pepe22222",
+							"type": "text"
+						},
+						{
+							"key": "shell",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "work",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "internet",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/anuncios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"anuncios",
+						""
+					],
+					"query": [
+						{
+							"key": "shell",
+							"value": "yes",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"disabled": true
+						},
+						{
+							"key": "user",
+							"value": "tuRumbero82",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

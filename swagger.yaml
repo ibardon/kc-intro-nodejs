@@ -13,9 +13,7 @@ paths:
         200:
           description: 'OK'
         404:
-          description: 'Error No Encontrado'
-        422:
-          description: 'Error de Validación de Parámetros'
+          description: 'Sa Matao'
         500:
           description: 'Server Error'
 
@@ -43,10 +41,10 @@ paths:
     post:
       tags:
       - anuncios
-      summary: Añadir User
+      summary: Añadir Anuncio
       parameters:
-      - name: body
-        in: body
+      - name: Request
+        in: Request parameters:
         description: user Data
         required: true
         schema:
@@ -67,7 +65,7 @@ paths:
     put:
       tags:
       - anuncios
-      summary: Update User By Id
+      summary: Update Anuncio por Id
       parameters:
       - name: id
         in: path
@@ -83,10 +81,10 @@ paths:
       responses:
         200:
           description: 'OK'
-        400:
-          description: 'Bad Request'
-        409:
-          description: 'Conflict'
+        404:
+          description: 'Sa matao'
+        422:
+          description: 'Invalid ID'
         500:
           description: 'Server Error'
 
@@ -104,8 +102,6 @@ paths:
       responses:
         200:
           description: 'OK'
-        409:
-          description: 'Conflict'
         500:
           description: 'Server Error'
 
@@ -128,5 +124,4 @@ definitions:
         description: user Password
 
 schemes:
- - https
- - http
+  - http
